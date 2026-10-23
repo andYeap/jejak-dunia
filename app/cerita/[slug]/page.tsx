@@ -11,10 +11,9 @@ import { CatatTerakhirDibaca } from "@/components/BacaanTerakhir";
 import { ambilArtikel, daftarBab, semuaArtikel } from "@/lib/content";
 import { formatTanggal, LABEL_BUKTI } from "@/lib/model";
 import { Fakta, FaktaMitos } from "@/components/mdx/FaktaMitos";
-import { KuisMini } from "@/components/mdx/KuisMini";
 import { Sorotan } from "@/components/mdx/Sorotan";
 
-const komponen = { Fakta, FaktaMitos, KuisMini, Sorotan };
+const komponen = { Fakta, FaktaMitos, Sorotan };
 
 const GRADASI: Record<string, string> = {
   Sejarah: "from-stone-900 via-amber-950 to-orange-950",

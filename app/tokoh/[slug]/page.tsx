@@ -5,10 +5,9 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { ArtikelCard } from "@/components/ArtikelCard";
 import { ambilArtikel, ambilTokoh, semuaTokoh } from "@/lib/content";
 import { Fakta, FaktaMitos } from "@/components/mdx/FaktaMitos";
-import { KuisMini } from "@/components/mdx/KuisMini";
 import { Sorotan } from "@/components/mdx/Sorotan";
 
-const komponen = { Fakta, FaktaMitos, KuisMini, Sorotan };
+const komponen = { Fakta, FaktaMitos, Sorotan };
 
 export async function generateStaticParams() {
   return semuaTokoh().map((t) => ({ slug: t.slug }));
