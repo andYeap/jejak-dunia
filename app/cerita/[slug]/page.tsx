@@ -7,6 +7,7 @@ import { ArtikelCard } from "@/components/ArtikelCard";
 import { BuktiBadge } from "@/components/BuktiBadge";
 import { ProgressBaca } from "@/components/ProgressBaca";
 import { ModeBaca } from "@/components/ModeBaca";
+import { CatatTerakhirDibaca } from "@/components/BacaanTerakhir";
 import { ambilArtikel, daftarBab, semuaArtikel } from "@/lib/content";
 import { formatTanggal, LABEL_BUKTI } from "@/lib/model";
 import { Fakta, FaktaMitos } from "@/components/mdx/FaktaMitos";
@@ -57,6 +58,7 @@ export default async function HalamanCerita({
   return (
     <article>
       <ProgressBaca />
+      <CatatTerakhirDibaca slug={artikel.slug} judul={artikel.judul} />
 
       {/* Sampul cerita */}
       <div
@@ -87,15 +89,12 @@ export default async function HalamanCerita({
               Bab-bab dalam kisah ini
             </p>
             <ol className="mt-2 space-y-1.5">
-              {bab.map((b, i) => (
+              {bab.map((b) => (
                 <li key={b.id}>
                   <a
                     href={`#${b.id}`}
                     className="text-[0.95em] font-semibold text-orange-800 hover:underline"
                   >
-                    <span className="mr-2 font-serif font-black text-stone-400">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
                     {b.judul}
                   </a>
                 </li>

@@ -5,6 +5,7 @@ import { BuktiBadge } from "@/components/BuktiBadge";
 import { DAFTAR_KATEGORI } from "@/lib/model";
 import { semuaArtikel, semuaPeristiwa, semuaTokoh } from "@/lib/content";
 import { HariIniDalamSejarah } from "@/components/HariIniDalamSejarah";
+import { LanjutkanMembaca } from "@/components/LanjutkanMembaca";
 
 export default async function Beranda() {
   const artikel = semuaArtikel();
@@ -48,9 +49,11 @@ export default async function Beranda() {
         <HariIniDalamSejarah peristiwa={peristiwa} />
       </Suspense>
 
+      <LanjutkanMembaca />
+
       {/* Unggulan */}
       <section>
-        <h2 className="font-serif text-2xl font-black">Sorotan Pilihan</h2>
+        <h2 className="font-serif text-2xl font-black">Pilihan Editor</h2>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           {unggulan.map((a) => (
             <ArtikelCard key={a.slug} artikel={a} />
