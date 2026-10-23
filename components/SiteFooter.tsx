@@ -6,7 +6,8 @@ export function SiteFooter() {
           Jejak<span className="text-orange-400">Dunia</span>
         </p>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed">
-          Menjelajahi sejarah, misteri, dan teori konspirasi dunia dengan jernih — setiap
+          Kisah sejarah, misteri, dan teori konspirasi dunia yang ditulis untuk dibaca
+          seperti novel — setiap
           klaim ditandai status buktinya agar kamu bisa menilai sendiri mana fakta dan mana
           spekulasi.
         </p>

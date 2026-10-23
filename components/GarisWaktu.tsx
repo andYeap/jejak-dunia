@@ -66,7 +66,7 @@ export function GarisWaktu({ peristiwa }: { peristiwa: ItemGarisWaktu[] }) {
             <div className="mt-1 flex flex-wrap gap-2 text-xs">
               {p.slug && (
                 <Link
-                  href={`/artikel/${p.slug}`}
+                  href={`/cerita/${p.slug}`}
                   className="font-semibold text-orange-800 hover:underline"
                 >
                   Baca artikel →

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | JejakDunia",
   },
   description:
-    "Jelajahi sejarah, misteri, dan teori konspirasi dunia dengan jernih. Setiap klaim ditandai status buktinya.",
+    "Kisah sejarah, misteri, dan konspirasi dunia untuk dibaca seperti novel. Setiap klaim ditandai status buktinya.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

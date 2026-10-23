@@ -2,7 +2,24 @@
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
+import GithubSlugger from "github-slugger";
 import type { Artikel, ItemGarisWaktu, Tokoh } from "./model";
+
+export interface Bab {
+  id: string;
+  judul: string;
+}
+
+/** Ambil daftar "bab" (heading ##) dari isi MDX — urutan sesuai dokumen. */
+export function daftarBab(isi: string): Bab[] {
+  const slugger = new GithubSlugger();
+  const hasil: Bab[] = [];
+  for (const baris of isi.split("\n")) {
+    const m = baris.match(/^##\s+(.+?)\s*$/);
+    if (m) hasil.push({ id: slugger.slug(m[1]), judul: m[1] });
+  }
+  return hasil;
+}
 
 const DIR_KONTEN = path.join(process.cwd(), "content");
 

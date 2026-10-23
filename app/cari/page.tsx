@@ -3,8 +3,8 @@ import { Pencarian } from "@/components/Pencarian";
 import { semuaArtikel } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Cari",
-  description: "Cari artikel sejarah, misteri, dan konspirasi.",
+  title: "Cari Kisah",
+  description: "Cari kisah sejarah, misteri, dan konspirasi.",
 };
 
 export default async function Cari() {
@@ -19,8 +19,8 @@ export default async function Cari() {
   }));
   return (
     <div>
-      <h1 className="font-serif text-3xl font-black">Cari Artikel</h1>
-      <p className="mt-2 text-stone-600">Pencarian instan, tanpa server.</p>
+      <h1 className="font-serif text-3xl font-black">Cari Kisah</h1>
+      <p className="mt-2 text-stone-600">Pencarian instan di semua kisah, tanpa server.</p>
       <div className="mt-6">
         <Pencarian data={data} />
       </div>

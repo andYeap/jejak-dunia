@@ -5,8 +5,8 @@ import { semuaArtikel } from "@/lib/content";
 import type { Kategori } from "@/lib/model";
 
 export const metadata: Metadata = {
-  title: "Jelajah Artikel",
-  description: "Jelajahi semua artikel sejarah, misteri, dan konspirasi.",
+  title: "Koleksi Cerita",
+  description: "Koleksi kisah sejarah, misteri, dan konspirasi untuk dibaca.",
 };
 
 const SAH: (Kategori | "Semua")[] = ["Semua", "Sejarah", "Konspirasi", "Misteri"];
@@ -31,10 +31,10 @@ export default function Jelajah({
 }) {
   return (
     <div>
-      <h1 className="font-serif text-3xl font-black">Jelajah Artikel</h1>
-      <p className="mt-2 text-stone-600">Saring berdasarkan kategori.</p>
+      <h1 className="font-serif text-3xl font-black">Koleksi Cerita</h1>
+      <p className="mt-2 text-stone-600">Pilih kategorinya, lalu tenggelam dalam kisahnya.</p>
       <div className="mt-6">
-        <Suspense fallback={<p className="text-stone-500">Memuat artikel…</p>}>
+        <Suspense fallback={<p className="text-stone-500">Memuat cerita…</p>}>
           <IsiJelajah searchParams={searchParams} />
         </Suspense>
       </div>

@@ -38,7 +38,7 @@ export function HariIniDalamSejarah({ peristiwa }: { peristiwa: ItemGarisWaktu[]
       </p>
       {terbaik.slug && (
         <Link
-          href={`/artikel/${terbaik.slug}`}
+          href={`/cerita/${terbaik.slug}`}
           className="mt-1 inline-block text-sm font-semibold text-orange-800 hover:underline"
         >
           Baca kisahnya →

@@ -5,7 +5,7 @@ import { formatTanggal, type Artikel } from "@/lib/model";
 export function ArtikelCard({ artikel }: { artikel: Artikel }) {
   return (
     <Link
-      href={`/artikel/${artikel.slug}`}
+      href={`/cerita/${artikel.slug}`}
       className="group flex flex-col rounded-2xl border border-stone-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
     >
       <div className="mb-2 flex flex-wrap items-center gap-2 text-xs font-semibold">

@@ -21,18 +21,18 @@ export default async function Beranda() {
           Sejarah · Misteri · Konspirasi
         </p>
         <h1 className="mx-auto mt-3 max-w-2xl font-serif text-3xl font-black leading-tight text-amber-50 sm:text-5xl">
-          Masa lalu menyimpan rahasia. Kami membantu membacanya.
+          Kisah nyata yang lebih seru dari fiksi.
         </h1>
         <p className="mx-auto mt-4 max-w-xl text-stone-300">
-          Dari Atlantis hingga Apollo 11 — setiap kisah dibedah dengan jernih, dan setiap
-          klaim ditandai status buktinya.
+          Dari Atlantis hingga Apollo 11 — bacalah sebagai cerita,
+          timbang sendiri mana fakta dan mana legenda.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
           <Link
-            href="/jelajah"
+            href="/cerita"
             className="rounded-full bg-orange-700 px-6 py-2.5 text-sm font-bold text-white hover:bg-orange-600"
           >
-            Mulai Menjelajah
+            Mulai Membaca
           </Link>
           <Link
             href="/timeline"
@@ -67,7 +67,7 @@ export default async function Beranda() {
             return (
               <Link
                 key={k.nama}
-                href={`/jelajah?kategori=${k.nama}`}
+                href={`/cerita?kategori=${k.nama}`}
                 className="rounded-2xl border border-stone-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
               >
                 <span
@@ -76,7 +76,7 @@ export default async function Beranda() {
                   {k.nama}
                 </span>
                 <p className="mt-2 text-sm leading-relaxed text-stone-600">{k.deskripsi}</p>
-                <p className="mt-2 text-xs font-semibold text-stone-500">{jumlah} artikel</p>
+                <p className="mt-2 text-xs font-semibold text-stone-500">{jumlah} kisah</p>
               </Link>
             );
           })}
@@ -86,7 +86,7 @@ export default async function Beranda() {
       {/* Terbaru + Tokoh */}
       <section className="grid gap-10 md:grid-cols-[1fr_320px]">
         <div>
-          <h2 className="font-serif text-2xl font-black">Terbaru</h2>
+          <h2 className="font-serif text-2xl font-black">Cerita Terbaru</h2>
           <div className="mt-4 grid gap-4">
             {terbaru.map((a) => (
               <ArtikelCard key={a.slug} artikel={a} />

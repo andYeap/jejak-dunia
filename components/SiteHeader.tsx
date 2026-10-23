@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const TAUTAN = [
   { href: "/", label: "Beranda" },
-  { href: "/jelajah", label: "Jelajah" },
+  { href: "/cerita", label: "Cerita" },
   { href: "/timeline", label: "Timeline" },
   { href: "/tokoh", label: "Tokoh" },
   { href: "/cari", label: "Cari" },

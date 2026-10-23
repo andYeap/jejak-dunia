@@ -21,8 +21,74 @@ body {
 
 /* Tipografi artikel */
 .prosa-artikel {
-  font-size: 1.075rem;
+  font-size: var(--fb, 1.075rem);
   line-height: 1.85;
+}
+
+.modebaca[data-font="s"] {
+  --fb: 0.95rem;
+}
+
+.modebaca[data-font="l"] {
+  --fb: 1.25rem;
+}
+
+.modebaca[data-mode="sepia"] {
+  background-color: #f3e9d3;
+  color: #433422;
+  padding: 1.25rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.modebaca[data-mode="gelap"] {
+  background-color: #171310;
+  color: #e8e0d1;
+  padding: 1.25rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.modebaca[data-mode="gelap"] .prosa-artikel h2,
+.modebaca[data-mode="gelap"] .prosa-artikel h3,
+.modebaca[data-mode="gelap"] .prosa-artikel strong {
+  color: #f5edd9;
+}
+
+.modebaca[data-mode="gelap"] .prosa-artikel blockquote {
+  background: #241d16;
+  border-color: #b45309;
+  color: #e8e0d1;
+}
+
+.modebaca[data-mode="sepia"] .prosa-artikel blockquote {
+  background: #e9dcc0;
+}
+
+/* Huruf kapital pembuka ala novel */
+.prosa-cerita > p:first-of-type::first-letter {
+  font-family: var(--font-serif);
+  font-size: 3.4em;
+  font-weight: 900;
+  float: left;
+  line-height: 0.9;
+  padding-right: 0.12em;
+  color: var(--color-aksen);
+}
+
+.modebaca[data-mode="gelap"] .prosa-cerita > p:first-of-type::first-letter {
+  color: #f0b35e;
+}
+
+.prosa-artikel a {
+  color: var(--color-aksen);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.modebaca[data-mode="gelap"] .prosa-artikel a {
+  color: #f0b35e;
 }
 
 .prosa-artikel p {
