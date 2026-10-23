@@ -1,0 +1,43 @@
+import { Suspense } from "react";
+import type { Metadata } from "next";
+import { FilterJelajah } from "@/components/FilterJelajah";
+import { semuaArtikel } from "@/lib/content";
+import type { Kategori } from "@/lib/model";
+
+export const metadata: Metadata = {
+  title: "Jelajah Artikel",
+  description: "Jelajahi semua artikel sejarah, misteri, dan konspirasi.",
+};
+
+const SAH: (Kategori | "Semua")[] = ["Semua", "Sejarah", "Konspirasi", "Misteri"];
+
+async function IsiJelajah({
+  searchParams,
+}: {
+  searchParams: Promise<{ kategori?: string }>;
+}) {
+  const { kategori } = await searchParams;
+  const awal: Kategori | "Semua" = SAH.includes(kategori as Kategori)
+    ? (kategori as Kategori)
+    : "Semua";
+  const artikel = semuaArtikel();
+  return <FilterJelajah semua={artikel} awal={awal} />;
+}
+
+export default function Jelajah({
+  searchParams,
+}: {
+  searchParams: Promise<{ kategori?: string }>;
+}) {
+  return (
+    <div>
+      <h1 className="font-serif text-3xl font-black">Jelajah Artikel</h1>
+      <p className="mt-2 text-stone-600">Saring berdasarkan kategori.</p>
+      <div className="mt-6">
+        <Suspense fallback={<p className="text-stone-500">Memuat artikel…</p>}>
+          <IsiJelajah searchParams={searchParams} />
+        </Suspense>
+      </div>
+    </div>
+  );
+}
