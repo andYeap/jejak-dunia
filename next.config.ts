@@ -6,6 +6,13 @@ const nextConfig: NextConfig = {
   cacheComponents: true,
   partialPrefetching: true,
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
+  async redirects() {
+    return [
+      { source: "/jelajah", destination: "/cerita", permanent: true },
+      { source: "/jelajah/:path*", destination: "/cerita/:path*", permanent: true },
+      { source: "/artikel/:slug", destination: "/cerita/:slug", permanent: true },
+    ];
+  },
   turbopack: {
     rules: {
       "*.css": {
