@@ -20,7 +20,7 @@ export default async function Beranda() {
         <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber-400">
           Sejarah · Misteri · Konspirasi
         </p>
-        <h1 className="mx-auto mt-3 max-w-2xl font-serif text-4xl font-black leading-tight text-amber-50 sm:text-5xl">
+        <h1 className="mx-auto mt-3 max-w-2xl font-serif text-3xl font-black leading-tight text-amber-50 sm:text-5xl">
           Masa lalu menyimpan rahasia. Kami membantu membacanya.
         </h1>
         <p className="mx-auto mt-4 max-w-xl text-stone-300">
